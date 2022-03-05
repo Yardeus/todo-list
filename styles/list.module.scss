@@ -1,0 +1,125 @@
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "C" "P";
+  grid-template-rows: 10fr 2fr;
+  justify-items: center;
+  align-items: center;
+  user-select: none;
+
+  .chip {
+    color: rgba(0, 0, 0, 0.8);
+    max-width: 900px;
+    width: 95%;
+    grid-area: C;
+    background-color: white;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 2em;
+
+    display: grid;
+    grid-template-areas: "H" "R";
+    grid-template-rows: 1fr 11fr;
+
+    .head {
+      grid-area: H;
+      display: grid;
+      grid-template-areas: "T A";
+      grid-template-columns: 11fr 1fr;
+      align-items: center;
+      justify-content: center;
+      .textWrapper {
+
+        background: linear-gradient(270deg, rgba(255, 0, 0, 0.64) 0%, rgba(36, 0, 255, 0.64) 100%);
+
+        font-size: 36px;
+        font-weight: bold;
+        justify-self: center;
+        grid-area: T;
+        text-transform: uppercase;
+        .text {
+          background: #FFFFFF;
+          mix-blend-mode: screen;
+        }
+      }
+
+      .add {
+        grid-area: A;
+        display: flex;
+        justify-self: end;
+
+
+      }
+
+
+    }
+
+
+    .rows {
+      grid-area: R;
+      .row {
+
+        padding: 1em;
+        min-height: 50px;
+        border-radius: 40px;
+        margin: 20px 0px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.25);
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 9fr 2fr;
+        grid-template-areas: "C T B";
+
+        .checkbox {
+          grid-area: C;
+          margin-right: 10px;
+        }
+
+        .title {
+          grid-area: T;
+          max-height: 120px;
+          overflow: auto;
+          font-size: 20px;
+          margin-right: 10px;
+          text-align: justify;
+
+        }
+
+        .buttons {
+          border-radius: 50px;
+          justify-self: end;
+          grid-area: B;
+          display: flex;
+
+          .edit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+
+          }
+
+          .delete {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background: rgba(0, 71, 255, 0.42);
+            box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
+    }
+
+
+
+
+  }
+
+  .pagination {
+    grid-area: P;
+  }
+
+}

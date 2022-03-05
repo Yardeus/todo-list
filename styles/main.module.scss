@@ -1,0 +1,19 @@
+.container {
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 2fr 10fr;
+    grid-template-areas: "N" "M";
+    align-items: center;
+
+    .nav {
+        grid-area: N;
+        margin-bottom: 10px;
+
+    }
+    .main {
+        height: 100%;
+        grid-area: M;
+    }
+}
+

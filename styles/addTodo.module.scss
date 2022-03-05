@@ -1,0 +1,14 @@
+.add {
+  grid-area: A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: rgba(0, 71, 255, 0.42);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  user-select: none;
+}

@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  grid-template-rows: repeat(2,6fr);
+  grid-template-areas: "F F" "W B";
+  gap: 30px;
+  .field {
+    grid-area: F;
+  }
+
+  .warn {
+    grid-area: W;
+  }
+
+  .btn {
+    cursor: pointer;
+    grid-area: B;
+    width: 90px;
+    background: rgba(0, 71, 255, 0.42);
+    border-radius: 20px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+
+  }
+}
