@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from "react";
 import styles from "../styles/list.module.scss"
-import {deleteTodo, getTodos, InitialStateType, setTodos} from "../redux/todo-reducer";
+import {deleteTodo, getTodos, setTodos} from "../redux/todo-reducer";
 import {AppStateType} from "../redux/store";
 import {compose} from "redux";
 import {connect} from "react-redux";
-import AddIcon from '@mui/icons-material/Add';
-import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 import Pagination from "@material-ui/lab/Pagination"
@@ -25,7 +23,7 @@ interface PropsType {
 }
 
 
-const List: React.FC<PropsType> = ({isFetching, data, getTodos, userId, setTodos, countData,deleteTodo}) => {
+const List: React.FC<PropsType> = ({data, getTodos, userId, setTodos, countData,deleteTodo}) => {
     debugger
     const [page, setPage] = useState(1)
     let pageSize = 5
@@ -53,7 +51,7 @@ const List: React.FC<PropsType> = ({isFetching, data, getTodos, userId, setTodos
 
     useEffect(() => {
         userId ? getTodos(userId) : null
-    }, [])
+    }, [userId,getTodos])
 
 
     return <div className={styles.container}>

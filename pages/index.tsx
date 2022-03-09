@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <MainLayout title={"Todo"}>
             <div className={styles.container}>
                 <div className={styles.logo}>
-                    <Image height={700}  width={700} src={logo}/>
+                    <Image alt={"logo"} height={700}  width={700} src={logo}/>
                 </div>
                 <div className={styles.description}>
                     Список дел поможет вам сосредоточиться на любом занятии — от работы до игры.

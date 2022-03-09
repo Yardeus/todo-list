@@ -6,12 +6,12 @@ import Link from "next/link";
 export const Navbar: React.FC = () => {
 
     return <div className={styles.container}>
-        <Link href={"/"}>
+        <Link href={"/"} passHref>
             <div className={styles.main}>
                 главная
             </div>
         </Link>
-        <Link href={"/todo"}>
+        <Link href={"/todo"} passHref>
             <div className={styles.list} onClick={()=>{
             }
             }>
